@@ -17,7 +17,7 @@ class UserResource(resources.ModelResource):
 
 
 @admin.register(User)
-class UserAdmin(ImportExportModelAdmin, admin.ModelAdmin):
+class UserAdmin(ImportMixin, admin.ModelAdmin):
     resource_class = UserResource
     list_display = ['name', 'surname', 'telephone', 'email']
 
