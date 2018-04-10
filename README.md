@@ -4,6 +4,15 @@
 
 Инструкция по запуску проекта
 
+
+Устанавливаем вирутальное окружение:
+
+pip install virtualenv
+
+Создаём виртуальное окружение:
+
+python -m venv attract_test
+
 Запускаем виртуальное окружение:
 
 cd attract_group_test/attract_test/Scripts
