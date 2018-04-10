@@ -21,13 +21,6 @@ class UserAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     resource_class = UserResource
     list_display = ['name', 'surname', 'telephone', 'email']
 
-    def creater(self):
-        def getx(password):
-            return password.insert(utils.passGenerator())
-
-        def setx(password, users):
-            self.mail.sendPassword(users.email, getx(password=users.password))
-
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
