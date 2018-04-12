@@ -7,7 +7,9 @@
 
 Устанавливаем вирутальное окружение:
 
-pip install virtualenv
+apt-get install python3-venv
+
+python3 -m venv attract_test
 
 Создаём виртуальное окружение:
 
@@ -15,9 +17,17 @@ python -m venv attract_test
 
 Запускаем виртуальное окружение:
 
-cd attract_group_test/attract_test/Scripts
+Для Windows:
+
+cd attract_group_test/attract_test/Scripts 
 
 activate
+
+Для Ubuntu:
+
+cd attract_group_test
+
+source attract_test/bin/activate
 
 
 Возвращаемся назад и устанавливаем все необходимые библиотеки:
