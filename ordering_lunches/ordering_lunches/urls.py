@@ -16,10 +16,16 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^', include('account_managment.urls', namespace='account_managment')),
     url(r'^account_managment/',include('account_managment.urls')),
+    url(r'^signup/',include('account_managment.urls')),
+    url(r'^cart/', include('cart.urls', namespace='cart')),
+    url(r'^order/', include('orders.urls', namespace='orders')),
+    #url(r'^accounts/', include('django.contrib.auth.urls')),
     #url(r'^orders/',include('orders.urls')),
 ]

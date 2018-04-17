@@ -1,9 +1,14 @@
+from django.conf import settings
 from django.db import models
-from account_managment.models import User, Product
+from account_managment.models import Product
+
 
 # Create your models here.
 class Order(models.Model):
-    customer = models.ForeignKey(User, on_delete=models.CASCADE)
+    #customer = models.ForeignKey(settings.AUTH_USER_MODEL)
+    first_name = models.CharField(verbose_name='Имя', max_length=50)
+    last_name = models.CharField(verbose_name='Фамилия', max_length=50)
+    address = models.CharField(verbose_name='Адрес', max_length=250)
     created = models.DateTimeField(verbose_name='Создан', auto_now_add=True)
     paid = models.BooleanField(verbose_name='Оплачен', default=False)
 
