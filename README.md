@@ -58,3 +58,13 @@ python manage.py runserver 0:8000
 
 Username: admin
 Password: 1qaz2wsx3edc4rfv
+
+Фронт-енд часть:
+
+Регистрируемся по ссылке:
+
+http://127.0.0.1:8000/signup/
+
+Переходим по ссылке для выбора товара:
+
+http://127.0.0.1:8000/
